@@ -103,7 +103,7 @@ public class PanelCRUD extends JPanel {
     private class btnActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == btLeer) {
-                ControllerCRUD.leerVehiculo(thisPanel, tablaVehiculos);
+                ControllerCRUD.leerVehiculo(tablaVehiculos);
             }
             if (e.getSource() == btActualizar) {
                 if (tablaVehiculos.getSelectedRow() == -1) {
@@ -146,7 +146,7 @@ public class PanelCRUD extends JPanel {
             if (e.getSource() == btRegistrar) {
                 if (comprobarCampos(thisPanel)) {
                     try {
-                        ControllerCRUD.insertarVehiculo(new Vehiculo(thisPanel.getTxtMarca().getText(), thisPanel.getTxtModelo().getText(), thisPanel.getTxtMatricula().getText(),thisPanel.comboBox.getSelectedItem().toString()), thisPanel, tablaVehiculos);
+                        ControllerCRUD.insertarVehiculo(new Vehiculo(thisPanel.getTxtMarca().getText(), thisPanel.getTxtModelo().getText(), thisPanel.getTxtMatricula().getText(),thisPanel.comboBox.getSelectedItem().toString()),tablaVehiculos);
                     } catch (SQLException ex) {
                         throw new RuntimeException(ex);
                     }

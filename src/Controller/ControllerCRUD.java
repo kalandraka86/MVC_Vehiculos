@@ -44,7 +44,7 @@ public class ControllerCRUD {
 		tablaVehiculos.setModel(modelo);
 	}
 
-	public static boolean insertarVehiculo(Vehiculo vehiculo, PanelCRUD frmVehiculo, JTable tablaVehiculos) throws SQLException {
+	public static boolean insertarVehiculo(Vehiculo vehiculo, JTable tablaVehiculos) throws SQLException {
 		boolean insertado = false;
 		if (vehiculo.getDniCliente().equalsIgnoreCase("")){
 			JOptionPane.showMessageDialog(null,"No puedes asignar un coche sin propietario","ERROR",JOptionPane.ERROR_MESSAGE);
@@ -72,7 +72,7 @@ public class ControllerCRUD {
 		return eliminado;
 	}
 
-	public static void leerVehiculo(PanelCRUD thisPanel, JTable tablaVehiculos) {
+	public static void leerVehiculo(JTable tablaVehiculos) {
 		int filaSelec = tablaVehiculos.getSelectedRow();
 
 		String modelo = "";
