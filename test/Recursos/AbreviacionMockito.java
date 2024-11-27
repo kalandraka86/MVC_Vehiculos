@@ -21,7 +21,7 @@ class AbreviacionMockito {
     @Mock
     private IDAOVehiculo mockDAOVehiculo;
     @InjectMocks
-    private ServicioVehiculos servicio;
+    private ServicioVehiculosTest servicio;
 
     @BeforeEach
     void beforeEach() {
